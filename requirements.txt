@@ -1,0 +1,6 @@
+pymoo
+numpy
+pandas
+scikit-learn
+numba
+tqdm
