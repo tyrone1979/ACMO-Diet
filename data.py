@@ -73,6 +73,6 @@ def json_to_csv(json_file, csv_file):
 
 
 # 使用示例
-json_file = '../../data/allrecipes.json'
-csv_file = '../../data/food_data.csv'
+json_file = './data/allrecipes.json'
+csv_file = './data/food_data.csv'
 json_to_csv(json_file, csv_file)

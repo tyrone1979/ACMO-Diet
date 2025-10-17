@@ -90,7 +90,7 @@ class NutritionOptimizationProblem(Problem):
 
     def save_results_csv(self, problem_name, subdir, F, X, i,T):
         # 确保目录存在
-        path = f'../results/{problem_name}/{subdir}'
+        path = f'./results/{problem_name}/{subdir}'
         self._ensure_directory_exists(path)
 
         # 保存 F 结果

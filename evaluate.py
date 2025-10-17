@@ -131,13 +131,13 @@ class EvaluatorPymoo(Evaluator):
                 seed = np.random.randint(0, 1000)  # 每次运行时生成不同的随机种子
                 try:
                     self.F[i].append(
-                        np.genfromtxt(f'../results/{self.problem.name}/{name}/{name}_f_{i}.csv', delimiter=',',
+                        np.genfromtxt(f'./results/{self.problem.name}/{name}/{name}_f_{i}.csv', delimiter=',',
                                       skip_header=1))
                     self.X[i].append(
-                        np.genfromtxt(f'../results/{self.problem.name}/{name}/{name}_x_{i}.csv', delimiter=',',
+                        np.genfromtxt(f'./results/{self.problem.name}/{name}/{name}_x_{i}.csv', delimiter=',',
                                       skip_header=1))
                     self.T[i].append(
-                        np.genfromtxt(f'../results/{self.problem.name}/{name}/{name}_t_{i}.csv', delimiter=',',
+                        np.genfromtxt(f'./results/{self.problem.name}/{name}/{name}_t_{i}.csv', delimiter=',',
                                       skip_header=1))
                 except FileNotFoundError:
                     res = minimize(
@@ -215,7 +215,7 @@ if __name__ == "__main__":
                         help="b=baseline or o=operator")
     parser.add_argument("-f", type=bool, default=True, required = False,
                         help="show graph")
-    food_data = pd.read_csv("../../data/food_data.csv")
+    food_data = pd.read_csv("./data/food_data.csv")
     food_data['calories'] = food_data['calories'] / 1000.0
     food_data['protein'] = food_data['protein'] / 100.0
     food_data['carbs'] = food_data['carbs'] / 100.0
